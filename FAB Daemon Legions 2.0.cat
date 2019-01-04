@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a422-c29f-5027-f336" name="FAB DL 2.0" revision="9" battleScribeVersion="2.01" authorName="Artur &apos;WarX&apos; Fijalkowski" authorContact="wiki.warx@gmail.com" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a422-c29f-5027-f336" name="FAB DL 2.0" revision="10" battleScribeVersion="2.01" authorName="Artur &apos;WarX&apos; Fijalkowski" authorContact="wiki.warx@gmail.com" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules>
     <rule id="5122-7830-9011-1a51" name="Immortal Denizens" hidden="false">
@@ -631,7 +631,7 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b2d-5cbe-6207-69b2" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f18-05f5-38dc-c675" type="min"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f18-05f5-38dc-c675" type="min"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
@@ -1675,19 +1675,6 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
             <characteristic name="Aeg" characteristicTypeId="9820-1785-03cb-9eae" value="5+"/>
           </characteristics>
         </profile>
-        <profile id="93a7-5e4d-e1d7-840d" name="Myrmidon Offensive" hidden="false" profileTypeId="154c-6605-1486-e1da" profileTypeName="3 Offensive">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Att" characteristicTypeId="8265-800f-bc87-d00a" value="1"/>
-            <characteristic name="Off" characteristicTypeId="7d3b-bb95-3d29-26f7" value="5"/>
-            <characteristic name="Str" characteristicTypeId="4d4a-2100-804f-99e5" value="4"/>
-            <characteristic name="AP" characteristicTypeId="7a8c-adb0-d1b8-a1b6" value="1"/>
-            <characteristic name="Agi" characteristicTypeId="2a23-367f-8828-c297" value="3"/>
-          </characteristics>
-        </profile>
       </profiles>
       <rules/>
       <infoLinks>
@@ -1720,6 +1707,12 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
               <conditionGroups/>
             </modifier>
           </modifiers>
+        </infoLink>
+        <infoLink id="95ea-5bb7-376f-a8b3" name="Myrmidon Offensive" hidden="false" targetId="971c-d3b1-52c3-e841" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
         </infoLink>
       </infoLinks>
       <modifiers/>
@@ -2143,7 +2136,9 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
@@ -2490,7 +2485,9 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="7d68-425a-70de-0bf9" name="Hasten the Hour" hidden="false" collective="false" type="upgrade">
               <profiles/>
@@ -2504,7 +2501,9 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="964d-d205-19c8-e886" name="Spear of Infinity" hidden="false" collective="false" type="upgrade">
               <profiles/>
@@ -2518,7 +2517,9 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="d079-6fef-5c5d-1b15" name="Fate‚Äôs Judgement" hidden="false" collective="false" type="upgrade">
               <profiles/>
@@ -2532,7 +2533,9 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
@@ -2625,7 +2628,9 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3a0d-aa65-df02-01df" name="Hellhounds" hidden="false" collective="false" type="unit">
       <profiles>
@@ -2903,7 +2908,7 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
         <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="65ce-1f50-81cb-52dd" name="Threshing Engine - Fly" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="65ce-1f50-81cb-52dd" name="Threshing Engine - Fly" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="2a23-c984-0c0a-952c" name="Threshing Engine Global" hidden="false" profileTypeId="8292-1fb8-8251-29a9" profileTypeName="1 Global">
           <profiles/>
@@ -3130,7 +3135,9 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
           <categoryLinks/>
         </entryLink>
       </entryLinks>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3198-4164-0f51-4ea2" name="Maw of Akaan" hidden="false" collective="false" type="unit">
       <profiles>
@@ -3452,6 +3459,259 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9‚Ä
       </entryLinks>
       <costs>
         <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="610.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b5f8-7399-95ea-f00e" name="Titanslayer Chariot" hidden="false" collective="false" type="unit">
+      <profiles>
+        <profile id="9b5b-7aa7-3320-b0fa" name="Titanslayer Chariot Global" hidden="false" profileTypeId="8292-1fb8-8251-29a9" profileTypeName="1 Global">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Adv" characteristicTypeId="b0d9-2dab-f10b-9b13" value="6&quot;"/>
+            <characteristic name="Mar" characteristicTypeId="db10-a838-f72f-3ed6" value="6&quot;"/>
+            <characteristic name="Dis" characteristicTypeId="be28-67a6-2280-9eaf" value="8"/>
+            <characteristic name="Size" characteristicTypeId="2e17-9c12-bfb4-59b0" value="Large"/>
+            <characteristic name="Type" characteristicTypeId="3145-83b1-14d6-8023" value="Construct"/>
+          </characteristics>
+        </profile>
+        <profile id="5f83-eabf-1c8b-52a6" name="Titanslayer Chariot Defensive" hidden="false" profileTypeId="e6e2-5027-c8f6-da13" profileTypeName="2 Defensive DL">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="HP" characteristicTypeId="61df-0ca3-17b2-f001" value="4"/>
+            <characteristic name="Def" characteristicTypeId="5b8d-8753-654e-d9f8" value="4"/>
+            <characteristic name="Res" characteristicTypeId="f988-a51e-9e65-0291" value="5"/>
+            <characteristic name="Arm" characteristicTypeId="fdeb-4a6f-8679-2769" value="0"/>
+            <characteristic name="Aeg" characteristicTypeId="9820-1785-03cb-9eae" value="5+"/>
+          </characteristics>
+        </profile>
+        <profile id="345e-ba1e-af30-1811" name="Cthonic Machinator" hidden="false" profileTypeId="154c-6605-1486-e1da" profileTypeName="3 Offensive">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Att" characteristicTypeId="8265-800f-bc87-d00a" value="3"/>
+            <characteristic name="Off" characteristicTypeId="7d3b-bb95-3d29-26f7" value="3"/>
+            <characteristic name="Str" characteristicTypeId="4d4a-2100-804f-99e5" value="6"/>
+            <characteristic name="AP" characteristicTypeId="7a8c-adb0-d1b8-a1b6" value="3"/>
+            <characteristic name="Agi" characteristicTypeId="2a23-367f-8828-c297" value="3"/>
+          </characteristics>
+        </profile>
+        <profile id="7b94-40ee-4baf-ff45" name="Titanslayer Chariot Chassis" hidden="false" profileTypeId="154c-6605-1486-e1da" profileTypeName="3 Offensive">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Att" characteristicTypeId="8265-800f-bc87-d00a"/>
+            <characteristic name="Off" characteristicTypeId="7d3b-bb95-3d29-26f7"/>
+            <characteristic name="Str" characteristicTypeId="4d4a-2100-804f-99e5" value="7"/>
+            <characteristic name="AP" characteristicTypeId="7a8c-adb0-d1b8-a1b6" value="2"/>
+            <characteristic name="Agi" characteristicTypeId="2a23-367f-8828-c297" value=""/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="b497-3e5f-0da6-39a0" name="Mountain Breaker" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <description>The model gains +D3‚Äù Advance Rate when rolling for Charge Range against units that consist entirely of models with Towering Presence. In addition, the model‚Äôs Impact Hits gain Multiple Wounds (D3, against Towering Presence).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="51e8-24a8-1619-2326" name="Impact Hits" hidden="false" targetId="197f-58cf-73ad-ac42" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="append" field="name" value=" (D3+1)">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="4b12-6ca5-c691-5f77" name="Swiftstride" hidden="false" targetId="d15d-3c8e-23db-ab7b" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="c40f-9329-c1c7-f2c2" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="da22-66d8-187a-3247" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="9859-f79e-73e7-1e57" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="780e-c3e6-edfd-3948" name="Devastating Charge" hidden="false" targetId="c66c-e69e-a4f1-0351" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="append" field="name" value=" (+2 Str, Battle Focus)">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="9b76-b5a5-327f-7ffa" name="Myrmidon" hidden="false" targetId="971c-d3b1-52c3-e841" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="append" field="name" value=" (2)">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b286-571e-4871-0c4e" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="3fd2-c62f-fcd7-223b" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries/>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="1edc-5fb3-39ea-518e" name="Command Group" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries>
+            <selectionEntry id="5d03-4226-6ab2-ac11" name="Standard Bearer" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cc5a-83f9-7a08-b268" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="20.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="89a6-2e17-1bab-71cd" name="Manifestation" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa28-a418-30e6-a86e" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks>
+            <entryLink id="b7bb-faa8-6629-ad96" name="Digestive Vomit" hidden="false" targetId="4b96-3e93-31dd-e02e" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="15">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints/>
+              <categoryLinks/>
+            </entryLink>
+            <entryLink id="725b-352d-7c7b-22fa" name="Stiff Upper Lip" hidden="false" targetId="3d99-01a4-58cf-606f" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="20">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints/>
+              <categoryLinks/>
+            </entryLink>
+            <entryLink id="609f-8cf3-ef1e-a1ac" name="Segmented Shell" hidden="false" targetId="6325-18bd-a3b5-fd13" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="10">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints/>
+              <categoryLinks/>
+            </entryLink>
+            <entryLink id="1adf-7308-dca2-6c9f" name="Centipede Legs" hidden="false" targetId="b40c-425b-c660-3337" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+            </entryLink>
+            <entryLink id="517a-59db-64aa-bae5" name="Divining Snout" hidden="false" targetId="020d-6dd1-8b3b-4b39" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="5">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints/>
+              <categoryLinks/>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="250.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -3818,7 +4078,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9‚Ä
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="35.0"/>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ef58-dfc9-3863-bdc8" name="Battle Standard Bearer" hidden="false" collective="false" type="upgrade">
@@ -5087,6 +5347,214 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9‚Ä
         <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="b8bf-11bb-c792-32f8" name="Greenfire Eyes" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="d895-74d1-0003-e4c4" name="Chitinous Scales" hidden="false" targetId="ef40-b248-3ee0-1813" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c43-890c-57a8-1416" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="30.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2a2a-8a90-6861-b669" name="Charged Tendrils" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="8059-51ab-1004-b6f2" name="Charged Tendrils" hidden="false" targetId="159b-a9c9-24f9-cc23" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb5d-d5ee-b942-1a53" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="30.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="02d9-648f-a14f-b318" name="Tarskin - Dominant" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="8b58-6fb9-edd0-95fc" name="Tarskin" hidden="false" targetId="400c-0a14-47ec-0756" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17af-a82d-ba5b-be9c" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="75.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4cae-33d8-153a-3190" name="Hammer Hand" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="6c3e-aad7-6c00-cb7f" name="Hammerhand" hidden="false" targetId="d6b1-3259-aae4-a420" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2107-285f-cab2-55ef" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="809c-6770-be90-46c6" name="Iron Husk" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="aa3e-3b78-bf0a-f9e0" name="Iron Husk" hidden="false" targetId="b20b-ff41-3dc0-b3bb" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="680b-67c6-64c8-b37b" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="70a1-cd61-8d36-6db3" name="Third Eye" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="7930-b1a5-a004-440b" name="Third Eye" hidden="false" targetId="555a-cfa9-c3f4-66ae" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c63c-18cc-f268-c21c" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9fec-1349-74bd-7537" name="Cloven Hooves" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="c9b3-4035-a23d-913f" name="Cloven Hooves" hidden="false" targetId="def6-73b3-1c44-3b86" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a005-001f-f643-b58b" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f300-8a1f-db9c-5c48" name="Withering Vapour" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="2341-45fa-e837-85ad" name="Withering Vapour" hidden="false" targetId="c946-edc7-b517-5792" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e693-e80b-ea42-8a2c" type="max"/>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="208b-e7cd-59a8-bacd" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="45.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cccf-b217-ec9d-e09e" name="Chitinous Scales" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="73a4-317c-2f52-8907" name="Chitinous Scales" hidden="false" targetId="ef40-b248-3ee0-1813" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4df-2e2b-882d-82b7" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="30.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="d6a6-7f76-cdbc-814b" name="Manifestations of Father Chaos" hidden="false" collective="false">
@@ -5204,6 +5672,78 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9‚Ä
           <categoryLinks/>
         </entryLink>
         <entryLink id="7fcd-033b-a200-2760" name="Centipede Legs - Dominant" hidden="false" targetId="bfe7-32f3-7203-b2ce" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="6876-16d1-3f50-5dfe" name="Bronze Backbone - Dominant" hidden="false" targetId="0e0d-f286-31c3-7e84" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="6b74-134d-c562-f772" name="Chitinous Scales" hidden="false" targetId="cccf-b217-ec9d-e09e" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="d64a-637c-1b3b-8418" name="Charged Tendrils" hidden="false" targetId="2a2a-8a90-6861-b669" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="8f4d-aaae-8cff-e70e" name="Tarskin - Dominant" hidden="false" targetId="02d9-648f-a14f-b318" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="b8e5-8509-128b-faed" name="Hammer Hand" hidden="false" targetId="4cae-33d8-153a-3190" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="e642-d824-4c8f-4e0c" name="Iron Husk" hidden="false" targetId="809c-6770-be90-46c6" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="53b4-ab51-f631-44ef" name="Third Eye" hidden="false" targetId="70a1-cd61-8d36-6db3" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="e80a-3d9f-46f3-3eb8" name="Cloven Hooves" hidden="false" targetId="9fec-1349-74bd-7537" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="c8c3-aab9-97d6-a5d4" name="Withering Vapour" hidden="false" targetId="f300-8a1f-db9c-5c48" type="selectionEntry">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -6351,6 +6891,62 @@ At the end of each Round of Combat during which the model‚Äôs unit was Engaged i
       <description>Cannot be taken by Gigantic models.
 At the end of each Round of Combat during which the model‚Äôs unit was Engaged in Combat, roll a D6 and add the number of unsaved wounds caused by Close Combat Attacks from models with Broodmother and R&amp;F models in the bearer&apos;s unit. On a score of 7 or more, the unit Raises D3 Health Points.</description>
     </rule>
+    <rule id="ef40-b248-3ee0-1813" name="Chitinous Scales" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>The model gains +2 Armour, to a maximum of 3.</description>
+    </rule>
+    <rule id="159b-a9c9-24f9-cc23" name="Charged Tendrils" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>At the end of Siphon the Veil, the owner may store one additional Veil Token, up to a maximum of 6.</description>
+    </rule>
+    <rule id="400c-0a14-47ec-0756" name="Tarskin - Dominant" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>Enemy units in base contact with one or more models with this Manifestation suffer -1 Attack Value.</description>
+    </rule>
+    <rule id="d6b1-3259-aae4-a420" name="Hammerhand" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>The bearer gains +1 Attack Value.</description>
+    </rule>
+    <rule id="b20b-ff41-3dc0-b3bb" name="Iron Husk" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>Cannot be taken by Gigantic models. The model gains +1 Resilience.</description>
+    </rule>
+    <rule id="555a-cfa9-c3f4-66ae" name="Third Eye" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>When a Learned Spell that targets the model or its unit is successfully cast, the bearer may cast that spell as a Bound Spell with Power Level (5/8) in the following Magic Phase.</description>
+    </rule>
+    <rule id="def6-73b3-1c44-3b86" name="Cloven Hooves" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>The model gains Impact Hits (D3). These Impact Hits are resolved with Strength 5 and Armour Penetration 2.</description>
+    </rule>
+    <rule id="c946-edc7-b517-5792" name="Withering Vapour" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>The model gains Breath Attack (Str 3, AP 2).</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="c6d3-8078-cdfc-c72d" name="Dark Fire" hidden="false" profileTypeId="a00c-d586-ee68-ed21" profileTypeName="6 Ranged Weapon">
@@ -6416,6 +7012,19 @@ At the end of each Round of Combat during which the model‚Äôs unit was Engaged i
         <characteristic name="Str" characteristicTypeId="4d4a-2100-804f-99e5" value="4"/>
         <characteristic name="AP" characteristicTypeId="7a8c-adb0-d1b8-a1b6" value="3"/>
         <characteristic name="Agi" characteristicTypeId="2a23-367f-8828-c297"/>
+      </characteristics>
+    </profile>
+    <profile id="971c-d3b1-52c3-e841" name="Myrmidon" hidden="false" profileTypeId="154c-6605-1486-e1da" profileTypeName="3 Offensive">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Att" characteristicTypeId="8265-800f-bc87-d00a" value="1"/>
+        <characteristic name="Off" characteristicTypeId="7d3b-bb95-3d29-26f7" value="5"/>
+        <characteristic name="Str" characteristicTypeId="4d4a-2100-804f-99e5" value="4"/>
+        <characteristic name="AP" characteristicTypeId="7a8c-adb0-d1b8-a1b6" value="1"/>
+        <characteristic name="Agi" characteristicTypeId="2a23-367f-8828-c297" value="3"/>
       </characteristics>
     </profile>
   </sharedProfiles>
