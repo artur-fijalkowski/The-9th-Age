@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a422-c29f-5027-f336" name="FAB DL 2.0" revision="8" battleScribeVersion="2.01" authorName="Artur &apos;WarX&apos; Fijalkowski" authorContact="wiki.warx@gmail.com" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a422-c29f-5027-f336" name="FAB DL 2.0" revision="9" battleScribeVersion="2.01" authorName="Artur &apos;WarX&apos; Fijalkowski" authorContact="wiki.warx@gmail.com" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules>
     <rule id="5122-7830-9011-1a51" name="Immortal Denizens" hidden="false">
@@ -535,11 +535,85 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
       </costs>
     </selectionEntry>
     <selectionEntry id="3bab-f66c-5c81-1d3f" name="Harbinger of Father Chaos" hidden="false" collective="false" type="unit">
-      <profiles/>
+      <profiles>
+        <profile id="1a84-7a62-1a0e-a49a" name="Harbinger Global" hidden="false" profileTypeId="8292-1fb8-8251-29a9" profileTypeName="1 Global">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Adv" characteristicTypeId="b0d9-2dab-f10b-9b13" value="5&quot;"/>
+            <characteristic name="Mar" characteristicTypeId="db10-a838-f72f-3ed6" value="10&quot;"/>
+            <characteristic name="Dis" characteristicTypeId="be28-67a6-2280-9eaf" value="8"/>
+            <characteristic name="Size" characteristicTypeId="2e17-9c12-bfb4-59b0" value="Standard"/>
+            <characteristic name="Type" characteristicTypeId="3145-83b1-14d6-8023" value="Beast"/>
+          </characteristics>
+        </profile>
+        <profile id="e8b1-21f9-dbf1-bf41" name="Harbinger Defensive" hidden="false" profileTypeId="e6e2-5027-c8f6-da13" profileTypeName="2 Defensive DL">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="HP" characteristicTypeId="61df-0ca3-17b2-f001" value="3"/>
+            <characteristic name="Def" characteristicTypeId="5b8d-8753-654e-d9f8" value="5"/>
+            <characteristic name="Res" characteristicTypeId="f988-a51e-9e65-0291" value="4"/>
+            <characteristic name="Arm" characteristicTypeId="fdeb-4a6f-8679-2769" value="0"/>
+            <characteristic name="Aeg" characteristicTypeId="9820-1785-03cb-9eae" value="4+"/>
+          </characteristics>
+        </profile>
+        <profile id="221e-1bab-6c0b-ad27" name="Harbinger Offensive" hidden="false" profileTypeId="154c-6605-1486-e1da" profileTypeName="3 Offensive">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Att" characteristicTypeId="8265-800f-bc87-d00a" value="3"/>
+            <characteristic name="Off" characteristicTypeId="7d3b-bb95-3d29-26f7" value="5"/>
+            <characteristic name="Str" characteristicTypeId="4d4a-2100-804f-99e5" value="5"/>
+            <characteristic name="AP" characteristicTypeId="7a8c-adb0-d1b8-a1b6" value="2"/>
+            <characteristic name="Agi" characteristicTypeId="2a23-367f-8828-c297" value="5"/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
-      <infoLinks/>
+      <infoLinks>
+        <infoLink id="dfdf-a224-b6be-f073" name="Dark Fire" hidden="false" targetId="c6d3-8078-cdfc-c72d" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="append" field="name" value=" (3+)">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="651f-124d-76a5-511d" type="lessThan"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="3d81-1e84-b34f-609f" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="5ee6-3a4c-5215-2a09" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
       <modifiers/>
-      <constraints/>
+      <constraints>
+        <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d907-bfaa-a040-6353" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="e32f-b773-d813-18d8" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true">
           <profiles/>
@@ -549,7 +623,25 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="651f-124d-76a5-511d" name="Dark Fire (3+)" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b2d-5cbe-6207-69b2" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f18-05f5-38dc-c675" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="10.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="7ea2-7423-091c-574f" name="Manifestations" hidden="false" collective="false">
           <profiles/>
@@ -603,7 +695,177 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
               <constraints/>
               <categoryLinks/>
             </entryLink>
+            <entryLink id="7bfb-96ca-d4f4-3131" name="Manifestations of Gluttony" hidden="true" targetId="8717-1329-4d97-1c64" type="selectionEntryGroup">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2ed5-a2e9-79ee-0d10" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints/>
+              <categoryLinks/>
+            </entryLink>
           </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="c564-332c-689e-7f96" name="Wizard Level" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f76b-eb4a-9523-d12d" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="896e-a56d-ba13-e82b" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries>
+            <selectionEntry id="619d-8d7f-14c7-770d" name="Wizard Apprentice" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="2c55-14f7-0d9d-b43c" name="Wizard Apprentice" hidden="false" targetId="0d8a-3fd8-a61d-5b74" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="97c1-4669-1a51-c442" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="67b9-90c5-0965-4e48" name="Wizard Adept" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="4a48-77fd-98f4-2b8e" name="Wizard Adept" hidden="false" targetId="c0a6-6da5-98d6-f051" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8023-54e2-9c86-0f77" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="115.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b58d-f867-4039-6ac2" name="Path of Magic" hidden="true" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="67b9-90c5-0965-4e48" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="619d-8d7f-14c7-770d" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af8f-8ce7-7684-d32c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9aec-0e12-fb08-27ee" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries>
+            <selectionEntry id="8852-44cf-0e9b-af70" name="Evocation" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9c1-e421-4a67-74f9" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7290-7720-e455-8663" name="Witchcraft" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbea-7827-4858-b578" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9c94-d45c-4fe5-5af0" name="Divination" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="554a-6a44-7499-bacf" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ff01-5bf4-9535-c9fb" name="Thaumaturgy" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28b6-a28d-a927-6260" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -2870,6 +3132,328 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
       </entryLinks>
       <costs/>
     </selectionEntry>
+    <selectionEntry id="3198-4164-0f51-4ea2" name="Maw of Akaan" hidden="false" collective="false" type="unit">
+      <profiles>
+        <profile id="e1ba-5413-e9b3-755b" name="Maw of Akaan Global" hidden="false" profileTypeId="8292-1fb8-8251-29a9" profileTypeName="1 Global">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Adv" characteristicTypeId="b0d9-2dab-f10b-9b13" value="7&quot;"/>
+            <characteristic name="Mar" characteristicTypeId="db10-a838-f72f-3ed6" value="14&quot;"/>
+            <characteristic name="Dis" characteristicTypeId="be28-67a6-2280-9eaf" value="9"/>
+            <characteristic name="Size" characteristicTypeId="2e17-9c12-bfb4-59b0" value="Gigantic"/>
+            <characteristic name="Type" characteristicTypeId="3145-83b1-14d6-8023" value="Beast"/>
+          </characteristics>
+        </profile>
+        <profile id="8541-f8b5-5d56-7ab0" name="Maw of Akaan Defensive" hidden="false" profileTypeId="e6e2-5027-c8f6-da13" profileTypeName="2 Defensive DL">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="HP" characteristicTypeId="61df-0ca3-17b2-f001" value="9"/>
+            <characteristic name="Def" characteristicTypeId="5b8d-8753-654e-d9f8" value="5"/>
+            <characteristic name="Res" characteristicTypeId="f988-a51e-9e65-0291" value="5"/>
+            <characteristic name="Arm" characteristicTypeId="fdeb-4a6f-8679-2769" value="0"/>
+            <characteristic name="Aeg" characteristicTypeId="9820-1785-03cb-9eae" value=""/>
+          </characteristics>
+        </profile>
+        <profile id="db8b-4167-2f0c-5d28" name="Maw of Akaan Offensive" hidden="false" profileTypeId="154c-6605-1486-e1da" profileTypeName="3 Offensive">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Att" characteristicTypeId="8265-800f-bc87-d00a" value="6"/>
+            <characteristic name="Off" characteristicTypeId="7d3b-bb95-3d29-26f7" value="5"/>
+            <characteristic name="Str" characteristicTypeId="4d4a-2100-804f-99e5" value="6"/>
+            <characteristic name="AP" characteristicTypeId="7a8c-adb0-d1b8-a1b6" value="1"/>
+            <characteristic name="Agi" characteristicTypeId="2a23-367f-8828-c297" value="3"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="96c9-01e8-f260-3b17" name="Devour" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <description>For each unsaved wound the model causes with Close Combat Attacks, roll a D6 at the end of the Initiative Step. For each rolled 4+, the model
+gains +1 Health Point. When the model has 18 Health Points, all units within 9” immediately suffer 2D6 hits with Toxic Attacks, and the model is removed as a casualty.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="84b2-6062-e61d-c706" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="append" field="name" value=" (5+, against Magical Attacks)">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="97fd-3191-225b-36d7" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="7c3b-434b-47ab-eefd" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="7ac4-78ee-9f66-5278" name="Fortitude" hidden="false" targetId="faef-6f9d-ae02-d420" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="append" field="name" value=" (5+)">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2adb-a59b-6fa4-cf34" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="ac02-3a4e-b4ce-be3a" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="1fe9-1e2f-faaf-9b5f" name="Dominion of Gluttony" hidden="true" collective="false" type="upgrade">
+          <profiles/>
+          <rules>
+            <rule id="c371-d81a-5466-8508" name="Dominion of Gluttony" hidden="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <description>Follows the rules for Dominion. The affected models’ Melee Attacks must reroll failed to-wound rolls of ‘1’.</description>
+            </rule>
+          </rules>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="1f7b-a95a-2eb1-42a8" value="1">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ed5-a2e9-79ee-0d10" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c7f-f43c-5dc4-d687" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f7b-a95a-2eb1-42a8" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="72c7-f42f-4582-03fa" name="Path of Magic" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23b9-3d47-8abe-4648" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="397e-cf02-8f3b-836f" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries>
+            <selectionEntry id="47a9-613d-1138-a706" name="Evocation" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7620-a3be-f9e3-5f9b" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ace8-e145-3318-3cb5" name="Witchcraft" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea53-d01d-8156-b5d5" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="ef68-3bc1-9007-4b2e" name="Wizard Level" hidden="false" collective="false" defaultSelectionEntryId="6584-1505-ac58-dd76">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e377-0a8c-72a5-e489" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a87-f401-6435-e07f" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries>
+            <selectionEntry id="6584-1505-ac58-dd76" name="Wizard Apprentice" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="cc60-10f0-6dbb-c9be" name="Wizard Apprentice" hidden="false" targetId="0d8a-3fd8-a61d-5b74" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc85-0d7d-29ea-d024" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f6cc-1e22-e9da-0d50" name="Wizard Adept" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="da71-7ddc-edd1-dff2" name="Wizard Adept" hidden="false" targetId="c0a6-6da5-98d6-f051" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbd5-b6e5-42ac-0ce1" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="75.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="791b-d2bb-99e7-c0ab" name="Wizard Master" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="b9a2-3c2a-c614-cc6b" name="Wizard Master" hidden="false" targetId="fa5b-1bdc-8550-50c7" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d28a-cd66-8a07-e392" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="225.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="d81c-d76e-4700-5f02" name="Manifestations" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3eb-dad3-1127-563d" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks>
+            <entryLink id="30cd-55e2-da4f-253f" name="Manifestations of Gluttony" hidden="false" targetId="8717-1329-4d97-1c64" type="selectionEntryGroup">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+            </entryLink>
+            <entryLink id="19e8-f694-8d58-93c1" name="Manifestations of Father Chaos" hidden="false" targetId="d6a6-7f76-cdbc-814b" type="selectionEntryGroup">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="2ed5-a2e9-79ee-0d10" name="Army General" hidden="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="610.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks/>
   <sharedSelectionEntries>
@@ -4425,6 +5009,84 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
         <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="ea4f-7ee3-6ff1-bea2" name="Broodmother - Dominant" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="0086-3253-0a20-a356" name="Broodmother - Dominant" hidden="false" targetId="715c-ac30-1343-90c4" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="492c-8c0d-2b63-4c44" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01cf-02b0-d50c-fc71" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="3dc5-a46b-ae3a-1b03" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="492c-8c0d-2b63-4c44" name="Broodmother - Dominant (Guiding)" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="04f5-7a45-8cd5-136a" name="Broodmother - Dominant (Guiding)" hidden="false" targetId="cbcf-6fb2-2b18-0588" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ea4f-7ee3-6ff1-bea2" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5329-6841-4381-6b76" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="f230-6653-c9f7-51f5" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="d6a6-7f76-cdbc-814b" name="Manifestations of Father Chaos" hidden="false" collective="false">
@@ -4770,6 +5432,22 @@ accepts first. In addition, when fighting a Duel, the model gains Lethal Strike 
           <categoryLinks/>
         </entryLink>
         <entryLink id="9e09-87e3-7042-1825" name="Unhinging Jaw - Dominant" hidden="false" targetId="b80d-9adb-5efd-2120" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="908e-615a-6c74-fbdc" name="Broodmother - Dominant" hidden="false" targetId="ea4f-7ee3-6ff1-bea2" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="1fd9-4c2d-432f-366f" name="Broodmother - Dominant (Guiding)" hidden="false" targetId="492c-8c0d-2b63-4c44" type="selectionEntry">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -5656,6 +6334,22 @@ affected by the Manifestation. If the affected model is not a Wizard, it gains W
       <infoLinks/>
       <modifiers/>
       <description>When the unit is Engaged with an enemy unit’s Flank or Rear Facing, the model and each R&amp;F model in its unit gains +1 Strength and +1 Armour Penetration.</description>
+    </rule>
+    <rule id="715c-ac30-1343-90c4" name="Broodmother - Dominant" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>Cannot be taken by Gigantic models.
+At the end of each Round of Combat during which the model’s unit was Engaged in Combat, roll a D6 and add the number of unsaved wounds caused by Close Combat Attacks from models with Broodmother. On a score of 7 or more, the unit Raises D3 Health Points.</description>
+    </rule>
+    <rule id="cbcf-6fb2-2b18-0588" name="Broodmother - Dominant (Guiding)" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>Cannot be taken by Gigantic models.
+At the end of each Round of Combat during which the model’s unit was Engaged in Combat, roll a D6 and add the number of unsaved wounds caused by Close Combat Attacks from models with Broodmother and R&amp;F models in the bearer&apos;s unit. On a score of 7 or more, the unit Raises D3 Health Points.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
