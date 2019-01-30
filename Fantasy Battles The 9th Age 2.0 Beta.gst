@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="20" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="21" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -2328,27 +2328,51 @@
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="increment" field="02ee-ea44-8365-04b3" value="4">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="40.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="c9b2-0d6b-4437-db1e" type="max"/>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="02ee-ea44-8365-04b3" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="22ab-3922-c59e-2dec" name="Core" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="increment" field="c440-aac4-f1f2-f213" value="2.5">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="25.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="6c0f-17bd-ee3f-53df" type="min"/>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c440-aac4-f1f2-f213" type="min"/>
           </constraints>
         </categoryLink>
         <categoryLink id="6742-b649-a3a3-09a1" name="Aves" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="increment" field="2411-bf2d-5cc3-0ca3" value="3.5">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="35.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="262e-a556-e5ea-b1a4" type="max"/>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2411-bf2d-5cc3-0ca3" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="c0e6-8fdd-33e0-4a67" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false">
